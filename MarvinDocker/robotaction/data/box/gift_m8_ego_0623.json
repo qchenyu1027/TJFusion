@@ -1,0 +1,133 @@
+{
+  "nodes": [
+    {
+      "node_id": "001",
+      "state_description": "The left gripper approaches the green box; the toy car and red bag remain on the table.",
+      "next_action": [
+        { 
+          "target": "blue_small_box",
+          "action_name": "pick",
+          "arm": "left",
+          "speed": 0.8,
+          "correction_mode": "forward"
+        }
+      ],
+      "parents": null,
+      "center_feature": null
+    },
+    {
+      "node_id": "002",
+      "state_description": "The left gripper holds the green box; the right gripper grasps the pink chain to open it.",
+      "next_action": [
+        { 
+          "target": "yellow_small_object",
+          "action_name": "pull",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward",
+          "finish_home": true
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "003",
+      "state_description": "The green box is open; the right gripper moves toward the toy car.",
+      "next_action": [
+        { 
+          "target": "yellow toy",
+          "action_name": "pick",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward"
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "004",
+      "state_description": "The right gripper picks up the toy car and moves it above the open box.",
+      "next_action": [
+        { 
+          "target": "green small box",
+          "action_name": "near",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward",
+          "finish_home": true
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "005",
+      "state_description": "The right gripper places the toy car into the box and closes the box.",
+      "next_action": [
+        { 
+          "target": "green small box",
+          "action_name": "release",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward"
+        },
+        { 
+          "target": "green small box",
+          "action_name": "push",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward",
+          "finish_home": true
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "006",
+      "state_description": "The toy car is inside the closed box; the left gripper moves to grasp the box.",
+      "next_action": [
+        { 
+          "target": "pink box",
+          "action_name": "pick",
+          "arm": "right",
+          "speed": 0.8,
+          "correction_mode": "forward",
+          "finish_home": true
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "007",
+      "state_description": "The left gripper lifts the box above the bag.",
+      "next_action": [
+        { 
+          "target": "pink box",
+          "action_name": "near",
+          "arm": "left",
+          "speed": 0.8,
+          "correction_mode": "reverse",
+          "finish_home": true
+        }
+      ],
+      "center_feature": null
+    },
+    {
+      "node_id": "008",
+      "state_description": "The left gripper releases the box into the red bag; both grippers move away.",
+      "next_action": [
+        { 
+          "target": "pink box",
+          "action_name": "place",
+          "arm": "left",
+          "speed": 0.8,
+          "correction_mode": "reverse",
+          "finish_home": true
+        }
+      ],
+      "parents": [
+        "007"
+      ],
+      "center_feature": null
+    }
+  ]
+}

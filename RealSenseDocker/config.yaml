@@ -19,14 +19,14 @@ enable_hw_depth: true   # only meaningful for the head camera
 # In multi mode all three roles are opened; in single mode only `head` is used.
 cameras:
   - role: head
-    serial: "935422071547"          # head camera: color + IR stereo (+ hw depth)
+    serial: "243222070778"          # head camera: color + IR stereo (+ hw depth)
     enable_ir: true
     enable_depth: true
   - role: left
-    serial: "260322277082"
+    serial: "427622271868"
     enable_color_only: true
   - role: right
-    serial: "260322270977"
+    serial: "412622270871"
     enable_color_only: true
 
 server:

@@ -7,7 +7,8 @@ server:
   port: 5562
 
 sam3:
-  checkpoint_path: /workspace/model/sam3.pt
+  # checkpoint_path: /workspace/model/sam3.pt
+  checkpoint_path: /workspace/model/sam3.1_multiplex.pt
   score_threshold: 0.4
 
 efficient_sam3:

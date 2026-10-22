@@ -7,8 +7,8 @@ server:
   mode: multi
 model:
   path: /workspace/model/siglip2-so400m-patch14-224
-  checkpoint: /workspace/model/model_siglip2_best_loss.pt
-  graph_info_file: /workspace/model/graph_info_best_loss.json
+  checkpoint: /home/yang/Desktop/TJFusion/SiglipDocker/model/siglip_gift_m8_ego_0623.pt
+  graph_info_file: /home/yang/Desktop/TJFusion/SiglipDocker/model/siglip_gift_m8_ego_0623.json
   # Multi-view (3-camera) settings -- used only when server.mode == multi.
   # Pooler hyper-params MUST match training.
   multi:
